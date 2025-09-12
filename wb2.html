@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>List Stok Barang</title>
+<style>
+  body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+
+  .container {
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+  }
+
+  h2 {
+    color: #333;
+  }
+
+  /* Gaya tabel dasar */
+  #stok-barang-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  #stok-barang-table th, #stok-barang-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  #stok-barang-table th {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+
+  /* Gaya berwarna yang akan diaktifkan oleh JavaScript */
+  .colorful-table th {
+    background-color: #4CAF50; /* Warna hijau untuk header */
+    color: white;
+  }
+
+  .colorful-table tr:nth-child(odd) {
+    background-color: #747474; 
+  }
+
+  .colorful-table tr:nth-child(even) {
+    background-color: #2500f8; 
+  }
+
+  .colorful-table tr:hover {
+    background-color: #ff0000; 
+  }
+
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #008CBA;
+    color: white;
+    transition: background-color 0.3s ease;
+  }
+
+  button:hover {
+    background-color: #005f7a;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>List Stok Barang</h2>
+  <table id="stok-barang-table">
+    <thead>
+      <tr>
+        <th>No</th>
+        <th>Nama Product</th>
+        <th>Jumlah</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Sepatu Trail Running</td>
+        <td>24</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Jas Wind Breaker</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Water Bladder</td>
+        <td>5</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button onclick="changeToColorful()">Change to Colorfull</button>
+</div>
+
+<script>
+  function changeToColorful() {
+    const table = document.getElementById('stok-barang-table');
+    table.classList.add('colorful-table');
+  }
+</script>
+
+</body>
+</html>
