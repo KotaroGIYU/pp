@@ -1,0 +1,246 @@
+<?php
+// Data Pribadi
+$nama = "Andika wicaksana";
+$alamat = "permata harjamukti blok f5 no 3";
+$email = "andikawicaksana2006@email.com";
+$telepon = "+62 878-32162924";
+
+// Ringkasan
+$ringkasan = "Seorang pengembang web junior yang bersemangat dengan pengalaman 2 tahun dalam membangun dan memelihara aplikasi web menggunakan PHP, HTML, CSS, dan JavaScript. Mampu bekerja secara mandiri maupun dalam tim, serta cepat belajar teknologi baru.";
+
+// Pendidikan
+$pendidikan = [
+    [
+        "institusi" => "STMIK IKMI Cirebon",
+        "jurusan" => "Komputerisasi akuntansi",
+        "tahun" => "2024 - 2026",
+        "ipk" => "3.85"
+    ],
+   ];
+
+// Pengalaman Kerja
+$pengalaman = [
+    [
+        "jabatan" => "Pengembang Web Junior",
+        "perusahaan" => "PT. kasih sayang",
+        "tahun" => "2024 - Sekarang",
+        "deskripsi" => [
+            "Mengembangkan fitur-fitur baru pada platform e-commerce menggunakan PHP dan Laravel.",
+            "Memperbaiki bug dan meningkatkan performa website.",
+            "Berpartisipasi dalam pertemuan mingguan untuk perencanaan dan evaluasi proyek."
+        ]
+    ],
+    [
+        "jabatan" => "Magang Pengembang Web",
+        "perusahaan" => "Startup Kreatif",
+        "tahun" => "2023",
+        "deskripsi" => [
+            "Membantu tim dalam membuat landing page dengan HTML dan CSS.",
+            "Mendokumentasikan proses pengembangan dan kode program.",
+            "Belajar tentang version control menggunakan Git."
+        ]
+    ]
+];
+
+// Keterampilan
+$keterampilan = [
+    "Bahasa Pemrograman" => ["PHP", "JavaScript", "Python"],
+    "Framework" => ["Laravel", "Bootstrap", "Tailwind CSS"],
+    "Database" => ["MySQL", "PostgreSQL"],
+    "Tools" => ["Git", "VS Code", "Figma"],
+    "Lainnya" => ["REST API", "Responsive Design"]
+];
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum Vitae - <?php echo $nama; ?></title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .cv-container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.8em;
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            color: #7f8c8d;
+            margin: 0;
+        }
+
+        .section {
+            margin-bottom: 25px;
+        }
+
+        .section-heading {
+            font-size: 1.8em;
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+
+        .item-heading {
+            font-size: 1.2em;
+            color: #2c3e50;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .item-subheading {
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .description-list {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .description-list li {
+            margin-bottom: 5px;
+        }
+
+        .skills-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-category {
+            background-color: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        .skill-category h4 {
+            margin: 0 0 5px 0;
+            color: #2c3e50;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .skill-list li {
+            background-color: #3498db;
+            color: #fff;
+            padding: 3px 8px;
+            border-radius: 3px;
+            font-size: 0.9em;
+        }
+        .btn-back {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 10px 24px;
+    background-color: #d66a6a;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(214, 106, 106, 0.4);
+    transition: background-color 0.3s ease;
+}
+.btn-back:hover {
+    background-color: #a94444;
+}
+
+    </style>
+</head>
+<body>
+    <div class="cv-container">
+        <header>
+        <header>
+    <img src="foto biasa aja.jpg" width=150px alt="Foto Profil" class="profile-photo">
+    <h1><?php echo $nama; ?></h1>
+    <p><?php echo $alamat; ?> | <?php echo $email; ?> | <?php echo $telepon; ?> | <?php echo $linkedin; ?></p>
+
+        <div class="section">
+            <h2 class="section-heading">Ringkasan</h2>
+            <p><?php echo $ringkasan; ?></p>
+        </div>
+
+        <div class="section">
+            <h2 class="section-heading">Pendidikan</h2>
+            <?php foreach ($pendidikan as $item): ?>
+                <div class="item">
+                    <h3 class="item-heading"><?php echo $item['jurusan']; ?></h3>
+                    <p class="item-subheading"><?php echo $item['institusi']; ?> (<?php echo $item['tahun']; ?>)</p>
+                    <?php if (isset($item['ipk'])): ?>
+                        <p>IPK: <?php echo $item['ipk']; ?></p>
+                    <?php endif; ?>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <div class="section">
+            <h2 class="section-heading">Pengalaman Kerja</h2>
+            <?php foreach ($pengalaman as $item): ?>
+                <div class="item">
+                    <h3 class="item-heading"><?php echo $item['jabatan']; ?></h3>
+                    <p class="item-subheading"><?php echo $item['perusahaan']; ?> (<?php echo $item['tahun']; ?>)</p>
+                    <ul class="description-list">
+                        <?php foreach ($item['deskripsi'] as $deskripsi): ?>
+                            <li><?php echo $deskripsi; ?></li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endforeach; ?>
+        </div>
+
+        <div class="section">
+            <h2 class="section-heading">Keterampilan</h2>
+            <div class="skills-group">
+                <?php foreach ($keterampilan as $kategori => $daftar_skill): ?>
+                    <div class="skill-category">
+                        <h4><?php echo $kategori; ?></h4>
+                        <ul class="skill-list">
+                            <?php foreach ($daftar_skill as $skill): ?>
+                                <li><?php echo $skill; ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </div>
+    <!-- Tombol Back -->
+<a href="index kelompok eling.php" 
+class="btn-back">← Kembali ke Halaman Utama</a>
+</body>
+</html>
